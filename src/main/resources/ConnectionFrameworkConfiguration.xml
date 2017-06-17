@@ -1,0 +1,24 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	<bean
+		id="com.monstermachines.connectionfw.GMC.GMCVehiclesModelFlatFileInformationItem"
+		class="com.monstermachines.connectionfw.core.MappingConfiguration">
+		<property name="targetTable" value="models" />
+		<property name="fieldsMapping">
+			<list>
+				<bean class="com.monstermachines.connectionfw.core.InformationMappingField">
+					<property name="field" value="modelCode" />
+					<property name="getter" value="getCode" />
+				</bean>
+				<bean class="com.monstermachines.connectionfw.core.InformationMappingField">
+					<property name="field" value="modelName" />
+					<property name="getter" value="getName" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+</beans>
